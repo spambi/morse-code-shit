@@ -7,47 +7,18 @@
 
 int main()
 {
+	std::string lmao = "abc";
+	std::vector<char> lol = splitString(lmao);
+	// For testing splitString
+	/*for (auto i : lol)
+		std::cout << i << ' ';*/
+
 	HWAVEOUT hWaveOut = 0;
 	WAVEFORMATEX wfx = { WAVE_FORMAT_PCM, 1, 80000, 8000, 1, 8, 0 };
 	waveOutOpen(&hWaveOut, WAVE_MAPPER, &wfx, 0, 0, CALLBACK_NULL);
 	char buffer[8000 * 60] = {};
 	// See http://goo.gl/hQdTi
-	for (DWORD t = 0; t < sizeof(buffer); ++t) {
-		//buffer[t] = static_cast<char>((((t * (t >> 8 | t >> 9) & 46 & t >> 8)) ^ (t & t >> 13 | t >> 6)) & 0xF1);
-		// 10000 for dit
-		// 30000 for dah
-		// 10000 for lettering change
-		// 70000 for space between words
-		if (t < 10000) {
-			buffer[t] = static_cast<char>(t);
-		}
-	}
-
-	char dit = 10000;
-	char dah = 30000;
-	char change = 10000;
-	char word = 70000;
-
-	int intervals[5];
 	
-	char letter;
-	switch (letter) {
-	case 'a':
-		intervals[2] = dit, dah, change;
-		break;
-	case 'b':
-		intervals[4] = dah, dit, dit, dit, change;
-		break;
-	case 'c':
-		intervals[4] = dah, dit, dah, dit, change;
-		break;
-	case 'd':
-		intervals[3] = dah, dit, dit, change;
-		break;
-	case 'e':
-		intervals[1] = dit, change;
-		break;
-	}
 
 	WAVEHDR header = { buffer, sizeof(buffer), 0, 0, 0, 0, 0, 0 };
 	waveOutPrepareHeader(hWaveOut, &header, sizeof(WAVEHDR));

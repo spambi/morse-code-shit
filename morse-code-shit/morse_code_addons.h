@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
  
-std::vector<std::string> splitString(std::string* string_to_split);
+std::vector<char> splitString(std::string string_to_split);
+
+void returnDoot(char bababoey);
