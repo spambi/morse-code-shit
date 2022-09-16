@@ -11,7 +11,9 @@ int main()
 
 	// See http://goo.gl/hQdTi
 	for (DWORD t = 0; t < sizeof(buffer); ++t)
-		buffer[t] = static_cast<char>((((t * (t >> 8 | t >> 9) & 46 & t >> 8)) ^ (t & t >> 13 | t >> 6)) & 0xF1);
+		//buffer[t] = static_cast<char>((((t * (t >> 8 | t >> 9) & 46 & t >> 8)) ^ (t & t >> 13 | t >> 6)) & 0xF1);
+		buffer[t] = static_cast<char>(t++);
+
 
 	WAVEHDR header = { buffer, sizeof(buffer), 0, 0, 0, 0, 0, 0 };
 	waveOutPrepareHeader(hWaveOut, &header, sizeof(WAVEHDR));
