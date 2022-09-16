@@ -20,19 +20,33 @@ char *returnDoot(char bababoey) {
 	switch (bababoey) {
 		char intervals[5];
 	case 'a':
-		intervals[2] = dit, dah, change;
+		intervals[0] = dit;
+		intervals[1] = dah;
+		intervals[2] = change;
 		break;
 	case 'b':
-		intervals[4] = dah, dit, dit, dit, change;
+		intervals[0] = dah;
+		intervals[1] = dit;
+		intervals[2] = dit;
+		intervals[3] = dit;
+		intervals[4] = change;
 		break;
 	case 'c':
-		intervals[4] = dah, dit, dah, dit, change;
+		intervals[0] = dah;
+		intervals[1] = dit;
+		intervals[2] = dah;
+		intervals[3] = dit;
+		intervals[4] = change;
 		break;
 	case 'd':
-		intervals[3] = dah, dit, dit, change;
+		intervals[0] = dah;
+		intervals[1] = dit;
+		intervals[2] = dit;
+		intervals[3] = change;
 		break;
 	case 'e':
-		intervals[1] = dit, change;
+		intervals[0] = dit;
+		intervals[1] = change;
 		break;
 	}
 
