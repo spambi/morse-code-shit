@@ -9,20 +9,21 @@ std::vector<char> splitString(std::string string_to_split) {
 	return fuckVector;
 }
 
-char *returnDoot(char bababoey) {
+int *returnDoot(int bababoey) {
 	
-	char dit = 10000;
-	char dah = 30000;
-	char change = 10000;
-	char word = 70000;
-	static char intervals[5];
-
+	int dit = 10000;
+	int dah = 30000;
+	int change = 10000;
+	int word = 70000;
+	static int intervals[5];
+	
 	switch (bababoey) {
-		char intervals[5];
+
 	case 'a':
 		intervals[0] = dit;
 		intervals[1] = dah;
 		intervals[2] = change;
+		return intervals;
 		break;
 	case 'b':
 		intervals[0] = dah;
@@ -30,6 +31,7 @@ char *returnDoot(char bababoey) {
 		intervals[2] = dit;
 		intervals[3] = dit;
 		intervals[4] = change;
+		return intervals;
 		break;
 	case 'c':
 		intervals[0] = dah;
@@ -37,18 +39,19 @@ char *returnDoot(char bababoey) {
 		intervals[2] = dah;
 		intervals[3] = dit;
 		intervals[4] = change;
+		return intervals;
 		break;
 	case 'd':
 		intervals[0] = dah;
 		intervals[1] = dit;
 		intervals[2] = dit;
 		intervals[3] = change;
+		return intervals;
 		break;
 	case 'e':
 		intervals[0] = dit;
 		intervals[1] = change;
+		return intervals;
 		break;
 	}
-
-	return intervals;
 }

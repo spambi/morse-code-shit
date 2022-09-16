@@ -5,4 +5,4 @@
  
 std::vector<char> splitString(std::string string_to_split);
 
-char *returnDoot(char bababoey);
+int *returnDoot(int bababoey);
