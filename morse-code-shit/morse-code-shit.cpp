@@ -23,6 +23,32 @@ int main()
 		}
 	}
 
+	char dit = 10000;
+	char dah = 30000;
+	char change = 10000;
+	char word = 70000;
+
+	int intervals[5];
+	
+	char letter;
+	switch (letter) {
+	case 'a':
+		intervals[2] = dit, dah, change;
+		break;
+	case 'b':
+		intervals[4] = dah, dit, dit, dit, change;
+		break;
+	case 'c':
+		intervals[4] = dah, dit, dah, dit, change;
+		break;
+	case 'd':
+		intervals[3] = dah, dit, dit, change;
+		break;
+	case 'e':
+		intervals[1] = dit, change;
+		break;
+	}
+
 	WAVEHDR header = { buffer, sizeof(buffer), 0, 0, 0, 0, 0, 0 };
 	waveOutPrepareHeader(hWaveOut, &header, sizeof(WAVEHDR));
 	waveOutWrite(hWaveOut, &header, sizeof(WAVEHDR));
