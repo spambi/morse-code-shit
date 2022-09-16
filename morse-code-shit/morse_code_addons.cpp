@@ -9,26 +9,14 @@ std::vector<char> splitString(std::string string_to_split) {
 	return fuckVector;
 }
 
-void returnDoot(char bababoey) {
+char *returnDoot(char bababoey) {
 	
 	char dit = 10000;
 	char dah = 30000;
 	char change = 10000;
 	char word = 70000;
+	static char intervals[5];
 
-	int intervals[5];
-	
-	for (DWORD t = 0; t < sizeof(buffer); ++t) {
-		//buffer[t] = static_cast<char>((((t * (t >> 8 | t >> 9) & 46 & t >> 8)) ^ (t & t >> 13 | t >> 6)) & 0xF1);
-		// 10000 for dit
-		// 30000 for dah
-		// 10000 for lettering change
-		// 70000 for space between words
-		//if (t < 10000) {
-		//	buffer[t] = static_cast<char>(t);
-		//}
-	}
-	
 	switch (bababoey) {
 		char intervals[5];
 	case 'a':
@@ -47,4 +35,6 @@ void returnDoot(char bababoey) {
 		intervals[1] = dit, change;
 		break;
 	}
+
+	return intervals;
 }
