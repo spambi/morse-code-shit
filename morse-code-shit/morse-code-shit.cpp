@@ -5,7 +5,7 @@
 int main()
 {
 	HWAVEOUT hWaveOut = 0;
-	WAVEFORMATEX wfx = { WAVE_FORMAT_PCM, 1, 8000, 8000, 1, 8, 0 };
+	WAVEFORMATEX wfx = { WAVE_FORMAT_PCM, 1, 2000, 8000, 1, 8, 0 };
 	waveOutOpen(&hWaveOut, WAVE_MAPPER, &wfx, 0, 0, CALLBACK_NULL);
 	char buffer[8000 * 60] = {};
 
