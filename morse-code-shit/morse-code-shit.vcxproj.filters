@@ -18,5 +18,13 @@
     <ClCompile Include="morse-code-shit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="morse_code_addons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="morse_code_addons.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

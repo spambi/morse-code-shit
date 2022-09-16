@@ -3,6 +3,7 @@
 #include <iostream>
 #include <ctime>
 #pragma comment(lib, "winmm.lib")
+#include "morse_code_addons.h"
 
 int main()
 {
