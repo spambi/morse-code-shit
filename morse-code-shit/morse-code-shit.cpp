@@ -16,17 +16,16 @@ int main()
 	char buffer[8000 * 60] = {};
 	// See http://goo.gl/hQdTi
 
-
 	for (auto i : lol) {
 		int* test = returnDoot(static_cast<int>(i));
 		for (size_t i = 0; i < 5; i++)
 		{
-			// See http://goo.gl/hQdTi
 			for (DWORD t = 0; t < sizeof(buffer); ++t) {
-				buffer[t] = static_cast<char>((((t * (t >> 8 | t >> 9) & 46 & t >> 8)) ^ (t & t >> 13 | t >> 6)) & 0xFF);
+				if (t < 100000) {
+					buffer[t] = static_cast<char>(t++);
+				}
 			}
 		}
-
 		WAVEHDR header = { buffer, sizeof(buffer), 0, 0, 0, 0, 0, 0 };
 		waveOutPrepareHeader(hWaveOut, &header, sizeof(WAVEHDR));
 		waveOutWrite(hWaveOut, &header, sizeof(WAVEHDR));
